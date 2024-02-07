@@ -6,9 +6,10 @@ export const Item = styled.li`
   border-radius: 5px;
   padding: 10px;
   text-align: center;
+  height: 100px;
 `;
 export const List = styled.ul`
   display: flex;
+  justify-content: center;
   gap: 20px;
 `;
-
