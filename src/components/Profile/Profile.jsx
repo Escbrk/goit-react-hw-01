@@ -1,4 +1,3 @@
-// import React from 'react';
 import {
   Container,
   Avatar,
@@ -8,32 +7,36 @@ import {
   Info,
 } from './Profile.styled';
 
-const Profile = ({ username, tag, location, avatar, stats }) => {
+export const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) => {
   return (
-    <Container classNameName="profile">
-      <Description className="description">
-        <Avatar src={avatar} alt="User avatar" className="avatar" />
-        <Info className="name">{username}</Info>
-        <Info className="tag">@{tag}</Info>
-        <Info className="location">{location}</Info>
+    <Container>
+      <Description>
+        <Avatar src={avatar} alt="User avatar" />
+        <Info>{username}</Info>
+        <Info>@{tag}</Info>
+        <Info>{location}</Info>
       </Description>
 
-      <StatsContainer className="stats">
+      <StatsContainer>
         <StatsItem>
-          <span className="label">Followers </span>
-          <span className="quantity">{stats.followers}</span>
+          <span>Followers </span>
+          <span>{followers}</span>
         </StatsItem>
         <StatsItem>
-          <span className="label">Views </span>
-          <span className="quantity">{stats.views}</span>
+          <span>Views </span>
+          <span>{views}</span>
         </StatsItem>
         <StatsItem>
-          <span className="label">Likes </span>
-          <span className="quantity">{stats.likes}</span>
+          <span>Likes </span>
+          <span>{likes}</span>
         </StatsItem>
       </StatsContainer>
     </Container>
   );
 };
-
-export default Profile;
