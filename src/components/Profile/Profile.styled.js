@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  outline: 1px solid black;
+  border: 1px solid black;
   border-radius: 5px;
   margin-top: 10px;
   overflow: hidden;
