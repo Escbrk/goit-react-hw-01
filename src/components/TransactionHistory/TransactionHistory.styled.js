@@ -4,6 +4,7 @@ export const Title = styled.th`
   background-color: black;
   color: white;
   border: 1px solid black;
+  flex: 1;
 `;
 
 export const Container = styled.table`
@@ -15,4 +16,5 @@ export const Container = styled.table`
 
 export const Td = styled.td`
   border: 1px solid black;
+  width: 33.33%;
 `;
